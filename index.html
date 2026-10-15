@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cho bà chã Man An 🎀</title>
+  <meta name="description" content="Món quà nhỏ 20/10 dành riêng cho bé Man An">
+  <meta name="theme-color" content="#fde2ea">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Tim bay nền (được tạo bằng JS cho nhẹ) -->
+  <div id="bg-hearts" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- ============ MÀN HÌNH MẬT KHẨU ============ -->
+  <section id="lock-screen" aria-label="Màn hình mật khẩu">
+    <div class="lock-card glass">
+      <div class="lock-ribbon">🎀</div>
+      <p class="lock-eyebrow">20 · 10 · Quà nhỏ</p>
+      <h1 class="lock-title">Chào bà chã 👋</h1>
+      <p class="lock-sub">Có cái này anh làm cho bé nè. Nhập mật khẩu để mở ra nha.<br><span class="lock-hint">Gợi ý: bé biết mà, đừng giả bộ 😏</span></p>
+
+      <div class="pin-dots" id="pin-dots" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="pin-field">
+        <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="• • • •" autocomplete="off" aria-label="Mật khẩu">
+        <button type="button" id="pin-toggle" class="icon-btn" aria-label="Hiện / ẩn mật khẩu" title="Hiện / ẩn">
+          <i class="fa-regular fa-eye"></i>
+        </button>
+      </div>
+
+      <div class="keypad" id="keypad" aria-label="Bàn phím số">
+        <button type="button" data-key="1">1</button>
+        <button type="button" data-key="2">2</button>
+        <button type="button" data-key="3">3</button>
+        <button type="button" data-key="4">4</button>
+        <button type="button" data-key="5">5</button>
+        <button type="button" data-key="6">6</button>
+        <button type="button" data-key="7">7</button>
+        <button type="button" data-key="8">8</button>
+        <button type="button" data-key="9">9</button>
+        <button type="button" data-key="del" class="key-del" aria-label="Xoá"><i class="fa-solid fa-delete-left"></i></button>
+        <button type="button" data-key="0">0</button>
+        <button type="button" data-key="ok" class="key-ok" aria-label="Mở quà"><i class="fa-solid fa-heart"></i></button>
+      </div>
+
+      <p class="lock-msg" id="lock-msg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ============ WEBSITE CHÍNH ============ -->
+  <div id="app" hidden>
+
+    <header class="site-header">
+      <a href="#home" class="brand" data-nav="home">
+        <span class="brand-heart">♥</span>
+        <span>Man An</span>
+      </a>
+      <nav class="site-nav" aria-label="Điều hướng">
+        <button type="button" class="nav-btn active" data-nav="home"><i class="fa-solid fa-house"></i><span>Trang chủ</span></button>
+        <button type="button" class="nav-btn" data-nav="album"><i class="fa-solid fa-images"></i><span>Album</span></button>
+        <button type="button" class="nav-btn" data-nav="frames"><i class="fa-solid fa-cube"></i><span>Khung 3D</span></button>
+        <button type="button" class="nav-btn" data-nav="letter"><i class="fa-solid fa-envelope"></i><span>Thư</span></button>
+      </nav>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ---------- TRANG CHỦ ---------- -->
+      <section id="home" class="page active" aria-label="Trang chủ">
+        <div class="hero">
+          <div class="hero-text">
+            <p class="eyebrow"><i class="fa-solid fa-sparkles"></i> Mở được rồi, giỏi ghê</p>
+            <h2 class="hero-title">Chúc mừng 20/10<br>nha bé <span class="hl">Man An</span></h2>
+            <p class="hero-desc">
+              Hông có hoa to, cũng hông có quà gì đắt tiền. Có cái web nhỏ này anh tự ngồi làm,
+              dành riêng cho bà chã thôi. Bé coi từ từ nha, đừng lướt nhanh quá.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-nav="album"><i class="fa-solid fa-images"></i> Xem hình của bé</button>
+              <button type="button" class="btn btn-ghost" data-nav="letter"><i class="fa-solid fa-envelope-open-text"></i> Đọc thư</button>
+            </div>
+            <div class="hero-tags">
+              <span class="tag">🎀 vợ iu</span>
+              <span class="tag">🧋 hay cười híp mắt</span>
+              <span class="tag">💗 của anh</span>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <div class="hero-photo glass">
+              <img src="images/manan-1.png" alt="Bé Man An đang cười, tay chống cằm, ngồi trong quán cà phê" loading="eager">
+              <div class="photo-caption">bé Man An 🎀</div>
+            </div>
+            <div class="float-heart fh-1">💗</div>
+            <div class="float-heart fh-2">🌸</div>
+            <div class="float-heart fh-3">💞</div>
+          </div>
+        </div>
+
+        <div class="note-row">
+          <div class="note glass">
+            <i class="fa-solid fa-mug-hot"></i>
+            <p>Tấm hình này anh thích nhất. Bé cười kiểu đó là anh hết giận liền.</p>
+          </div>
+          <div class="note glass">
+            <i class="fa-solid fa-music"></i>
+            <p>Nhạc nền là bài anh chọn cho bé. Bật loa lên nghe cho đúng vibe nha.</p>
+          </div>
+          <div class="note glass">
+            <i class="fa-solid fa-hand-pointer"></i>
+            <p>Bấm lung tung trên màn hình thử coi, có tim rớt ra đó.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- ALBUM ---------- -->
+      <section id="album" class="page" aria-label="Album ảnh">
+        <div class="section-head">
+          <p class="eyebrow"><i class="fa-solid fa-camera-retro"></i> Album của hai đứa</p>
+          <h2>Mấy tấm hình anh giữ</h2>
+          <p class="section-desc">Tấm nào anh cũng thấy bé xinh. Bấm vô một tấm để coi cho rõ, vuốt qua lại để chuyển.</p>
+        </div>
+        <div class="album-grid" id="album-grid"></div>
+      </section>
+
+      <!-- ---------- KHUNG ẢNH 3D ---------- -->
+      <section id="frames" class="page" aria-label="Khung ảnh 3D">
+        <div class="section-head">
+          <p class="eyebrow"><i class="fa-solid fa-cube"></i> Khung ảnh nổi</p>
+          <h2>Vòng xoay ảnh của bé</h2>
+          <p class="section-desc">Kéo qua kéo lại để xoay. Trên điện thoại thì vuốt nha. Bấm vào ảnh để phóng to.</p>
+        </div>
+
+        <div class="stage-wrap">
+          <div class="stage" id="stage-3d">
+            <div class="ring" id="ring-3d"></div>
+          </div>
+          <div class="stage-floor" aria-hidden="true"></div>
+        </div>
+
+        <div class="stage-controls">
+          <button type="button" class="icon-btn lg" id="ring-prev" aria-label="Xoay trái"><i class="fa-solid fa-chevron-left"></i></button>
+          <button type="button" class="btn btn-ghost sm" id="ring-auto"><i class="fa-solid fa-pause"></i> Tự xoay</button>
+          <button type="button" class="icon-btn lg" id="ring-next" aria-label="Xoay phải"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <!-- ---------- THƯ ---------- -->
+      <section id="letter" class="page" aria-label="Thư gửi bà chã">
+        <div class="section-head">
+          <p class="eyebrow"><i class="fa-solid fa-envelope"></i> Thư gửi bà chã</p>
+          <h2>Có vài dòng anh viết cho bé</h2>
+          <p class="section-desc">Bấm vào phong bì để mở nha.</p>
+        </div>
+
+        <div class="envelope-wrap">
+          <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Mở thư" aria-expanded="false">
+            <div class="env-back"></div>
+            <div class="env-letter" id="env-letter">
+              <div class="letter-paper">
+                <p class="letter-date">Ngày 20 tháng 10</p>
+                <h3 class="letter-greet">Gửi bà chã,</h3>
+                <p>Hôm nay 20/10, anh hông giỏi nói mấy câu sến, nên viết ở đây cho bé đọc.</p>
+                <p>Cảm ơn bé vì đã ở cạnh anh. Có lúc anh lì, có lúc anh quên này quên kia, mà bé vẫn chịu khó chịu anh. Anh biết hết đó, chỉ là ít nói ra thôi.</p>
+                <p>Anh thích nhất là lúc bé cười, kiểu cười híp mắt như trong hình. Nhìn cái là hết mệt.</p>
+                <p>Mong bé lúc nào cũng vui, ăn ngon ngủ đủ. Có chuyện gì buồn thì nói anh nghe, đừng giấu một mình.</p>
+                <p>Thương bé nhiều. Nhiều hơn bé nghĩ.</p>
+                <p class="letter-sign">— người yêu của bé 💗</p>
+              </div>
+            </div>
+            <div class="env-front"></div>
+            <div class="env-flap"></div>
+            <div class="env-seal"><i class="fa-solid fa-heart"></i></div>
+          </div>
+          <p class="env-hint" id="env-hint">Chạm vào phong bì nè 👆</p>
+          <button type="button" class="btn btn-ghost sm" id="env-close" hidden><i class="fa-solid fa-envelope"></i> Gấp thư lại</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Làm bằng tay (và hơi nhiều cà phê) cho bé Man An · 20/10</p>
+    </footer>
+
+    <!-- ---------- TRÌNH PHÁT NHẠC ---------- -->
+    <div id="music-player" class="glass" aria-label="Nhạc nền">
+      <div class="eq" id="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="music-info">
+        <p class="music-title">Nhạc của hai đứa</p>
+        <p class="music-status" id="music-status">Chưa phát</p>
+      </div>
+      <button type="button" class="icon-btn" id="music-mute" aria-label="Bật / tắt tiếng" title="Bật / tắt tiếng"><i class="fa-solid fa-volume-high"></i></button>
+      <button type="button" class="icon-btn play" id="music-play" aria-label="Phát / tạm dừng" title="Phát / tạm dừng"><i class="fa-solid fa-play"></i></button>
+    </div>
+
+  </div><!-- /#app -->
+
+  <!-- ---------- LIGHTBOX ---------- -->
+  <div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Xem ảnh">
+    <button type="button" class="lb-close icon-btn" id="lb-close" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" class="lb-nav lb-prev icon-btn" id="lb-prev" aria-label="Ảnh trước"><i class="fa-solid fa-chevron-left"></i></button>
+    <figure class="lb-figure">
+      <img id="lb-img" src="" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button type="button" class="lb-nav lb-next icon-btn" id="lb-next" aria-label="Ảnh sau"><i class="fa-solid fa-chevron-right"></i></button>
+    <p class="lb-count" id="lb-count"></p>
+  </div>
+
+  <!-- Toast lời nhắn nhỏ -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Nhạc nền: đúng file bạn gửi, trình duyệt phát track audio trong MP4 -->
+  <audio id="bgm" src="music/nhac-nen.mp4" loop preload="auto"></audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
